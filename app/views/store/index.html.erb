@@ -3,9 +3,6 @@
 <% end %>
 
 <h1>Your Pragmatic Catalog</h1>
-<% if @counter > 5 %>
-  <p>View Counter: <%= @counter %></p>
-<% end %>
 
 <ul class="catalog">
   <% cache @products do %>
@@ -19,7 +16,7 @@
             </p>
             <div class="price">
                 <%= number_to_currency(product.price) %>
-                <%= button_to 'Add to Cart', line_items_path(product_id: product) %>
+                <%= button_to 'Add to Cart', line_items_path(product_id: product), remote: true %>
             </div>
         </li>
       <% end %>
