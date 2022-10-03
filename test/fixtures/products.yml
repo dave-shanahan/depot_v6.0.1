@@ -20,3 +20,14 @@ ruby:
     delivered fast, you should add Ruby to your toolbox.
   price: 49.50
   image_url: ruby.jpg
+
+republic:
+  title: Republic
+  description:
+    The Republic is a Socratic dialogue, authored by Plato around 375 BC,
+    concerning justice, the order and character of the just city-state,
+    and the just man. It is Plato's best-known work,
+    and one of the world's most influential works of philosophy and political theory,
+    both intellectually and historically.
+  price: 25.99
+  image_url: republic.jpg
