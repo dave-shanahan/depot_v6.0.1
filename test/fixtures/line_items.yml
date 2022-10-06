@@ -5,5 +5,14 @@ one:
   cart: unique
 
 two:
-  product: ruby
+  product: republic
+  cart: unique
   order: one
+
+three:
+  product: ruby
+  cart: duplicate
+
+four:
+  product: ruby
+  cart: duplicate
