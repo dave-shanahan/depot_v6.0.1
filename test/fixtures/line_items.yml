@@ -5,6 +5,7 @@ one:
   cart: unique
 
 two:
+<<<<<<< Updated upstream
   product: republic
   cart: unique
 
@@ -15,3 +16,7 @@ three:
 four:
   product: ruby
   cart: duplicate
+=======
+  product: ruby
+  order: one
+>>>>>>> Stashed changes
