@@ -26,6 +26,38 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
     assert_select 'td', "Programming Ruby 1.9"
   end
 
+  test "should create line_items with unique products" do
+    assert_difference('LineItem.count') do
+      post line_items_url, params: { product_id: products(:ruby).id }
+    end
+
+    assert_difference('LineItem.count') do
+      post line_items_url, params: { product_id: products(:republic).id }
+    end
+
+    follow_redirect!
+
+    assert_select 'h2', 'Your Cart'
+    assert_select 'td', 'Programming Ruby 1.9'
+    assert_select 'td', 'Republic'
+  end
+
+  test "should create line_items with duplicate products" do
+    assert_difference('LineItem.count') do
+      post line_items_url, params: { product_id: products(:ruby).id }
+    end
+
+    assert_no_difference('LineItem.count') do
+      post line_items_url, params: { product_id: products(:ruby).id }
+    end
+
+    follow_redirect!
+
+    assert_select 'h2', 'Your Cart'
+    assert_select 'td.quantity', '2'
+    assert_select 'td', 'Programming Ruby 1.9'
+  end
+
   test "should create line_item via ajax" do
     assert_difference('LineItem.count') do
       post line_items_url, params: { product_id: products(:ruby).id }, xhr: true
@@ -55,6 +87,6 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
       delete line_item_url(@line_item)
     end
 
-    assert_redirected_to line_items_url
+    assert_redirected_to store_index_url
   end
 end
