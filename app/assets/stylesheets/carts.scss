@@ -31,6 +31,11 @@
       border-top: solid thin;
     }
   }
+
+  .actions form {
+    display: inline-block;
+  }
+
   input[type="submit"] {
     background-color: #881;
     border-radius: 0.354em;
@@ -42,4 +47,18 @@
   input[type="submit"]:hover {
     background-color: #992;
   }
+
+  input[type="submit"].checkout {
+    background-color: #bfb;
+    border-radius: 0.354em;
+    border: solid thin #888;
+    color: black;
+    font-size: 1.41em;
+    font-weight: bold;
+    padding: 0.354em 1em;
+  }
+  input[type="submit"].checkout:hover {
+    background-color: #9d9;
+  }
+
 }
