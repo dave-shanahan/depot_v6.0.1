@@ -7,6 +7,7 @@ one:
 two:
   product: republic
   cart: unique
+  order: one
 
 three:
   product: ruby
