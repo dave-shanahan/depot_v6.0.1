@@ -2,8 +2,16 @@
 
 This application was produced when reading the [Agile Web Development with Rails 6](https://pragprog.com/titles/rails6/agile-web-development-with-rails-6/) book.
 
+![Demo of Depot](demo.png)
+
 I learnt a lot from the book including:
--   
+- Unit and system tests
+- JS erb files to facilitate AJAX
+- Creating Atom feeds
+- Sending email
+- Creating custom basic authentication and authorisation system
+- Internationalization
+- Receiving email and responding with rich text
 
 ## Setup
 
