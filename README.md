@@ -1,24 +1,46 @@
-# README
+# Depot Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application was produced when reading the [Agile Web Development with Rails 6](https://pragprog.com/titles/rails6/agile-web-development-with-rails-6/) book.
 
-Things you may want to cover:
+I learnt a lot from the book including:
+-   
 
-* Ruby version
+## Setup
 
-* System dependencies
+### Requirements
 
-* Configuration
+- Ruby 2.6.5 (This is now unsupported, DO NOT USE in production)
+- Rails 6.0.1
+- Nodejs 12.22.12
 
-* Database creation
+### Commands
 
-* Database initialization
+- asdf install ruby 2.6.5
+- asdf local ruby 2.6.5
+- Confirm ruby 2.6.5 is set using ruby -v
 
-* How to run the test suite
+- gem install bundler:2.3.21
+- bundle install
 
-* Services (job queues, cache servers, search engines, etc.)
+- asdf install nodejs 12.22.12
+- asdf local nodejs 12.22.12
+- npm install yarn
+- npm install -g yarn
+- yarn install
 
-* Deployment instructions
+- bundle exec rails db:migrate 
+- bundle exec rails db:seed
+- bundle exec rails s
 
-* ...
+### Access Application
+
+- Visit [127.0.0.1:3000](http://127.0.0.1:3000/)
+
+- Admin login is [here](127.0.0.1:3000/admin)
+- Default admin credentials are *dave:secret*
+
+
+### Run tests
+
+- bundle exec rails test
+- bundle exec rails test:system
